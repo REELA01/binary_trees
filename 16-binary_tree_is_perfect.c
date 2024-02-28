@@ -10,8 +10,8 @@ int tree_check(const binary_tree_t *tree)
 
 	if (tree->left && tree->right)
 	{
-		lef = 1 + tree_is_perfect(tree->left);
-		rig = 1 + tree_is_perfect(tree->right);
+		lef = 1 + tree_check(tree->left);
+		rig = 1 + tree_check(tree->right);
 		if (rig == lef && rig != 0 && lef != 0)
 			return (rig);
 		return (0);
